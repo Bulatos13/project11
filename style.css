@@ -43,7 +43,7 @@ img{
 }
 .definition{
 	width: calc(100% - 10px);
-	height: 70px;
+	height: 60px;
 	border: 2px dashed black;
 	border-radius: 6px;
 
@@ -51,6 +51,18 @@ img{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	position: absolute;
+	bottom: 40px;
+	left: 5px;
+}
+.compound{
+	width: calc(100% - 10px);
+	height: 30px;
+	border: 2px dashed black;
+	border-radius: 6px;
+
+	text-align: center;
 
 	position: absolute;
 	bottom: 5px;

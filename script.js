@@ -12,7 +12,7 @@ let menuItem = document.getElementsByClassName('menu-item');
 plus.addEventListener('click', () => {
 	order.style.height = 120 + `px`;
 	purchase.style.height = 50 + `px`;
-	purchase.style.fontSize = 16;
+	purchase.style.fontSize = 16 + `px`;
 	main[0].style.marginBottom = 140 + `px`;
 	plus.style.transform = 'translateX(6px)';
 	setTimeout(() => {
@@ -28,7 +28,8 @@ function addOrder(e){
 
 function orderItemFinder(b){
 	for(let i = 0; i < menuItem.length; i++){
-		if(b[i].getBoundingClientRect().top > -30 && b[i].getBoundingClientRect().top < 200){
+		if(b[i].getBoundingClientRect().top > -100 && b[i].getBoundingClientRect().top < 350){
+
 			addOrder(price[i].innerHTML);
 		}
 	}
@@ -60,7 +61,7 @@ function outsideOrder(e){
 
 function orderItemFinderMinus(b){
 	for(let i = 0; i < menuItem.length; i++){
-		if(b[i].getBoundingClientRect().top > -30 && b[i].getBoundingClientRect().top < 200){
+		if(b[i].getBoundingClientRect().top > -100 && b[i].getBoundingClientRect().top < 350){
 			outsideOrder(price[i].innerHTML);
 		}
 	}
@@ -70,3 +71,5 @@ function orderItemFinderMinus(b){
 purchase.addEventListener('click', () => {
 	alert('пока не доступно =(');
 })
+
+console.log(menuItem[2].getBoundingClientRect());
