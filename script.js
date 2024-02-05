@@ -12,6 +12,7 @@ let menuItem = document.getElementsByClassName('menu-item');
 plus.addEventListener('click', () => {
 	order.style.height = 120 + `px`;
 	purchase.style.height = 50 + `px`;
+	purchase.style.fontSize = 16;
 	main[0].style.marginBottom = 140 + `px`;
 	plus.style.transform = 'translateX(6px)';
 	setTimeout(() => {
@@ -50,6 +51,7 @@ function outsideOrder(e){
 		order.style.height = 60 + `px`;
 		purchase.style.height = 0 + `px`;
 		main[0].style.marginBottom = 70 + `px`;
+		purchase.style.fontSize = 0;
 		purchase.innerHTML = 0;
 	} else {
 		purchase.innerHTML = Number(purchase.innerHTML) - Number(e);
